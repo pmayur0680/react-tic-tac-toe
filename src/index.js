@@ -93,5 +93,11 @@ function calculateWinner(squares) {
       return squares[a];
     }
   }
+  let gameTied = true;
+  for(let val of squares) {
+    if(val === null) 
+      gameTied = false;
+  }
+  if(gameTied) return "It's a Tie!";
   return null;
 }
